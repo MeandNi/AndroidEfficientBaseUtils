@@ -1,6 +1,6 @@
 # AndroidEfficientBaseUtils
 
-[![](https://jitpack.io/v/MeandNi/AndroidEfficientBaseUtils.svg)](https://jitpack.io/#MeandNi/AndroidEfficientBaseUtils)[![License][licenseSvg]][license]
+[![](https://jitpack.io/v/MeandNi/AndroidEfficientBaseUtils.svg)](https://jitpack.io/#MeandNi/AndroidEfficientBaseUtils)
 
 **Collecting the following utils and build some base Classes.**
 
