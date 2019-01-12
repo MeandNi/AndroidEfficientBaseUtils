@@ -1,11 +1,18 @@
 package meandni.com.baseutils.base;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 
+import butterknife.OnClick;
 import meandni.com.baseutils.R;
 
 
@@ -23,21 +30,6 @@ public abstract class BaseDrawerActivity extends BaseActivity {
     protected FrameLayout flActivityContainer;
     protected NavigationView navigationView;
 
-//    NavigationView.OnNavigationItemSelectedListener mListener = new NavigationView.OnNavigationItemSelectedListener() {
-//        @Override
-//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//            switch (item.getItemId()) {
-//                case R.id.action_git_hub:
-//                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Config.GITHUB)));
-//                    break;
-//                case R.id.action_blog:
-//                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Config.BLOG)));
-//                    break;
-//            }
-//            return false;
-//        }
-//    };
-
     @Override
     protected void setBaseView(@LayoutRes int layoutId) {
         mContentView = LayoutInflater.from(this).inflate(R.layout.activity_base_drawer, null);
@@ -46,8 +38,25 @@ public abstract class BaseDrawerActivity extends BaseActivity {
         flActivityContainer = findViewById(R.id.activity_container);
         flActivityContainer.addView(LayoutInflater.from(this).inflate(layoutId, flActivityContainer, false));
         navigationView = findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(getNavigationItemSelectedListener());
+        navigationView.inflateHeaderView(bindHeaderlayout());
+        navigationView.inflateMenu(bindMenu());
     }
 
-//    protected abstract NavigationView.OnNavigationItemSelectedListener getNavigationItemSelectedListener();
+    protected abstract int bindHeaderlayout();
+    protected abstract int bindMenu();
+
+    public interface MyNavigationItemSelectedListener {
+        void OnClickItem(MenuItem item);
+    }
+
+    protected void setNavigationItemSelectedListener(final MyNavigationItemSelectedListener listener){
+        NavigationView.OnNavigationItemSelectedListener mListener = new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                listener.OnClickItem(item);
+                return false;
+            }
+        };
+        navigationView.setNavigationItemSelectedListener(mListener);
+    }
 }

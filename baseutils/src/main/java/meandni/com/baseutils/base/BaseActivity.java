@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import butterknife.ButterKnife;
+
 /**
  * <pre>
  *     author: Meandni
@@ -39,6 +41,7 @@ public abstract class BaseActivity extends AppCompatActivity
         Bundle bundle = getIntent().getExtras();
         initData(bundle);
         setBaseView(bindLayout());
+        ButterKnife.bind(this);
         initView(savedInstanceState, mContentView);
         doBusiness();
     }

@@ -29,7 +29,7 @@
         android:gravity="center_vertical"
         android:text="@string/author"
         android:textColor="@color/white"
-        android:textSize="@dimen/font_40"
+        android:textSize="@dimen/font_24"
         android:textStyle="bold" />
 
     <TextView
