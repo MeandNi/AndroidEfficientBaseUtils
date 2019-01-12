@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/MeandNi/AndroidEfficientBaseUtils.svg)](https://jitpack.io/#MeandNi/AndroidEfficientBaseUtils)
 
-## [README of English](https://github.com/MeandNi/AndroidEfficientBaseUtils/README-EN.md)
+## [README of English](https://github.com/MeandNi/AndroidEfficientBaseUtils/blob/master/README-EN.md)
 
 **收集一些使用的基类和工具类，提高开发效率，让开发更简单.**
 
