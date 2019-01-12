@@ -11,7 +11,7 @@
 ## 更新日志
 
 - **20190110** Base Avtivity and Fragment And examples
-- **20190112** Many tools and optimized BaseDrawerActivity 
+- **20190112** Many utils and optimized BaseDrawerActivity 
 
 ## 内容列表
 
