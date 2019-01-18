@@ -61,8 +61,6 @@
 
 - Yangjiakang, **[MeandNi](https://meandni.com)**
 
-
-
 ## 鸣谢
 
 [@布兰柯基](https://github.com/Blankj)
@@ -71,7 +69,13 @@
 
 
 
-本库意义在于我对Android学习的记录，也借鉴了很多其他开发者的代码，感谢那些无私奉献开源者。同时我也希望有一天能为Android片土地贡献自己的一份力！
+本库意义在于我对Android学习的记录，也借鉴了很多其他开发者的代码，感谢那些无私奉献开源者。同时我也希望有一天能为Android这片土地贡献自己的一份力！
+
+
+
+## 依赖库
+
+- [Butterknife](https://github.com/JakeWharton/butterknife)
 
 ## License
 
