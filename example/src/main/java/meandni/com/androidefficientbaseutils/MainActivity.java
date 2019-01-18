@@ -79,7 +79,7 @@ public class MainActivity extends BaseDrawerActivity {
                 ToastUtils.showShort("base");
                 break;
             case R.id.btn_utils:
-                ToastUtils.showShort("utils");
+                UtilsActivity.start(this);
                 break;
         }
     }

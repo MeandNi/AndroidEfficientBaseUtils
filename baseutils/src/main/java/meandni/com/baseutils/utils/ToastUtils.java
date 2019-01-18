@@ -29,6 +29,8 @@ import android.widget.Toast;
 
 import java.lang.reflect.Field;
 
+import meandni.com.baseutils.R;
+
 /**
  * <pre>
  *     author: Meandni
@@ -179,6 +181,46 @@ public final class ToastUtils {
      */
     public static void showLong(final String format, final Object... args) {
         show(format, Toast.LENGTH_LONG, args);
+    }
+
+    /**
+     * Show QQStyle sToast for a short period of time.
+     *
+     * @param layoutId ID for an XML layout resource to load.
+     */
+    public static void showQQStyleShort(final CharSequence text, final int duration) {
+        HANDLER.post(new Runnable() {
+            @Override
+            public void run() {
+                TextView toastView;
+                if (duration == Toast.LENGTH_SHORT) {
+                    toastView = (TextView) showCustomShort(R.layout.utils_qqstyletoast);
+                } else {
+                    toastView = (TextView) showCustomLong(R.layout.utils_qqstyletoast);
+                }
+                toastView.setText(text);
+            }
+        });
+    }
+
+    /**
+     * Show QQStyle sToast for a short period of time.
+     *
+     * @param layoutId ID for an XML layout resource to load.
+     */
+    public static void showAlipayStyleShort(final CharSequence text, final int duration) {
+        HANDLER.post(new Runnable() {
+            @Override
+            public void run() {
+                TextView toastView;
+                if (duration == Toast.LENGTH_SHORT) {
+                    toastView = (TextView) showCustomShort(R.layout.utils_alipaystyletoast);
+                } else {
+                    toastView = (TextView) showCustomLong(R.layout.utils_alipaystyletoast);
+                }
+                toastView.setText(text);
+            }
+        });
     }
 
     /**

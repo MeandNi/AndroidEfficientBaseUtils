@@ -31,6 +31,7 @@ dependencies {
     implementation "com.android.support:design:$supportLibVersion"
     implementation "com.android.support.constraint:constraint-layout:$constraint"
     implementation "com.jakewharton:butterknife:$butterknife"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife"
 
     testImplementation 'junit:junit:4.12'

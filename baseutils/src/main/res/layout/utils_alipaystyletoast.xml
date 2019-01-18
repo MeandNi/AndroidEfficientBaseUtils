@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_toast_message"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#88000000"
+    android:gravity="center"
+    android:paddingLeft="@dimen/spacing_24"
+    android:paddingRight="@dimen/spacing_24"
+    android:paddingTop="@dimen/font_16"
+    android:paddingBottom="@dimen/font_16"
+    android:textColor="#EEFFFFFF"
+    android:maxLines="3"
+    android:textSize="@dimen/font_12" />

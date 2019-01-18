@@ -2,6 +2,7 @@ package meandni.com.baseutils.base;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
@@ -69,5 +70,29 @@ public abstract class BaseActivity extends AppCompatActivity
     @Override
     public void onClick(final View view) {
         if (!isFastClick()) onWidgetClick(view);
+    }
+
+    public ProgressDialog progressDialog;
+
+    public ProgressDialog showProgressDialog() {
+        progressDialog = new ProgressDialog(mActivity);
+        progressDialog.setMessage("加载中");
+        progressDialog.show();
+        return progressDialog;
+    }
+
+    public ProgressDialog showProgressDialog(CharSequence message) {
+        progressDialog = new ProgressDialog(mActivity);
+        progressDialog.setMessage(message);
+        progressDialog.show();
+        return progressDialog;
+    }
+
+    public void dismissProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing()) {
+            // progressDialog.hide();会导致android.view.WindowLeaked
+            progressDialog.dismiss();
+
+        }
     }
 }

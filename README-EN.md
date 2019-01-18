@@ -10,6 +10,7 @@ This library is based on the principle of making development simpler and more ef
 
  - **20190110** Base Avtivity and Fragment And examples
  - **20190112** Many tools and optimized BaseDrawerActivity 
+ - **20190118** Optimize ToastUtils And add SPUtils
 
 ## Table of Contents
 
@@ -29,6 +30,7 @@ This library is based on the principle of making development simpler and more ef
    5. BarUtils
    6. LogUtils
    7. PermissionUtils
+   8. SPUtils
 
 ## get-started
 
